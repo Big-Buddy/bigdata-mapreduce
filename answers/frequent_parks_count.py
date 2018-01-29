@@ -33,6 +33,7 @@ for row in unique_parks_counts:
 			if row[1] > top_row[1]:
 				del most_frequent[most_frequent.index(top_row)]
 				most_frequent.append(row)
+				break
 	else:
 		most_frequent.append(row)
 
