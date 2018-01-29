@@ -11,7 +11,7 @@ with open(csv_name, encoding='utf-8') as f:
 			unique_parks_counts.append((row[6], 1))
 
 		if row[6] and unique_parks_counts:		
-			flag = false		
+			flag = False		
 		
 			for unique_tuple in unique_parks_counts:
 				if row[6] in unique_tuple:	
