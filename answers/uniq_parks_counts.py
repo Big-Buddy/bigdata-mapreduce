@@ -15,7 +15,7 @@ with open(csv_name, encoding='utf-8') as f:
 		
 			for unique_tuple in unique_parks_counts:
 				if row[6] in unique_tuple:	
-					flag = true
+					flag = True
 					ptr = unique_parks_counts.index(unique_tuple)			
 					
 			if flag:
