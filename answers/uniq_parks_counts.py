@@ -25,4 +25,4 @@ with open(csv_name, encoding='utf-8') as f:
 				
 unique_parks_counts.sort()
 for row in unique_parks_counts:
-	print(row[0] + ": " + row[1])
+	print(row[0] + ": " + str(row[1]))
