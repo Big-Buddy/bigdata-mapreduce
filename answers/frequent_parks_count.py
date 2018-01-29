@@ -30,7 +30,7 @@ for row in unique_parks_counts:
 		most_frequent.append(row)
 	
 	if len(most_frequent) == 10:
-		if row[1] > min(most_frequent, key = itemgetter(1)):
+		if row[1] > min(most_frequent, key = itemgetter(1))[1]:
 			del most_frequent[most_frequent.index(min(most_frequent))]
 			most_frequent.append(row)
 	else:
