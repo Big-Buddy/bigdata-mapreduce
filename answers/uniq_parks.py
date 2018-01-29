@@ -7,7 +7,8 @@ with open(csv_name, encoding='utf-8') as f:
 	reader = csv.reader(f)
 	next(reader)
 	for row in reader:
-		if row[6] not in unique_parks:
+		if row[6] and row[6] not in unique_parks:
 			unique_parks.append(row[6])
 unique_parks.sort()
-print(unique_parks)
+for row in unique_parks:
+	print(row)
