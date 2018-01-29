@@ -1,5 +1,6 @@
 import sys
 import csv
+from operator import itemgetter
 
 csv_name = sys.argv[1]
 with open(csv_name, encoding='utf-8') as f:
@@ -37,7 +38,7 @@ for row in unique_parks_counts:
 	else:
 		most_frequent.append(row)
 
-unique_parks_counts.sort(key = lambda tup: tup[1], reverse = True)
+most_frequent.sort(key = itemgetter(1), reverse = True)
 
 for row in most_frequent:
 	print(row[0] + ": " + str(row[1]))
