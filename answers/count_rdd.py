@@ -8,7 +8,7 @@ conf = SparkConf().setAppName("lab1").setMaster("local")
 sc = SparkContext(conf=conf)
 
 rdd = sc.textFile(file_name)
-rdd = rdd.mapPartions(lambda x: csv.reader(x))
+rdd = rdd.mapPartitions(lambda x: csv.reader(x))
 header = rdd.first()
 rdd = rdd.filter(lambda x: x != header)
 
