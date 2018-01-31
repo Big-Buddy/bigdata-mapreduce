@@ -4,7 +4,7 @@ from pyspark import SparkContext, SparkConf
 
 file_name = sys.argv[1]
 
-conf = SparkConf().setAppName("lab1").setMaster(master)
+conf = SparkConf().setAppName("lab1").setMaster("local")
 sc = SparkContext(conf=conf)
 
 rdd = sc.textFile(file_name)
