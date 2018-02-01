@@ -17,4 +17,4 @@ rdd = rdd.map(lambda x: (x[6], 1))
 rdd = rdd.reduceByKey(lambda a, b: a+b)
 rdd = rdd.sortBy(lambda x: x)
 
-rdd.foreach(print)
+rdd.foreach(lambda x, y: print(x + ": " + (str)y))
