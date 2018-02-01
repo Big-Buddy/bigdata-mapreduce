@@ -27,5 +27,5 @@ with open(csv_name, encoding='utf-8') as f:
 most_frequent.sort(key = itemgetter(1), reverse = True)
 
 
-for row in most_frequent[0:9]:
+for row in most_frequent[0:10]:
 	print(row[0] + ": " + str(row[1]))
