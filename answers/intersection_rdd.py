@@ -25,6 +25,7 @@ rdd_2 = rdd_2.map(lambda x: x[6])
 rdd_2 = rdd_2.distinct()
 
 intersection_rdd = rdd_1.intersection(rdd_2)
+intersection_rdd = intersection_rdd.sortBy(lambda x: x)
 
 for row in intersection_rdd.collect():
 	print(row)
