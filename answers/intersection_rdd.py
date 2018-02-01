@@ -26,3 +26,5 @@ rdd_2 = rdd_2.distinct()
 
 intersection_rdd = rdd_1.intersection(rdd_2)
 
+for row in intersection_rdd.collect():
+	print(row)
