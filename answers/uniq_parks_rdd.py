@@ -17,5 +17,6 @@ rdd = rdd.map(lambda x: x[6])
 rdd = rdd.distinct()
 rdd = rdd.sortBy(lambda x: x)
 
-rdd.foreach(print)
+for row in rdd.collect():
+	print(row)
 
