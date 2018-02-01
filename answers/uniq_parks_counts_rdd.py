@@ -18,4 +18,4 @@ rdd = rdd.reduceByKey(lambda a, b: a+b)
 rdd = rdd.sortBy(lambda x: x)
 
 for row in rdd.collect():
-	print(row[0] + ": " + (str)row[1])
+	print(row[0] + ": " + row[1])
