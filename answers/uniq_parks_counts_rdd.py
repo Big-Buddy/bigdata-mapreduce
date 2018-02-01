@@ -14,7 +14,7 @@ rdd = rdd.filter(lambda x: x != header)
 
 rdd = rdd.filter(lambda x: x[6] != '')
 rdd = rdd.map(lambda x: (x[6], 1))
-rdd = rdd.groupByKey()
+rdd = rdd.reduceByKey(lambda a, b: a+b)
 rdd = rdd.sortBy(lambda x: x)
 
 rdd.foreach(print)
