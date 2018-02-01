@@ -15,7 +15,7 @@ rdd = rdd.filter(lambda x: x != header)
 rdd = rdd.filter(lambda x: x[6] != '')
 rdd = rdd.map(lambda x: (x[6], 1))
 rdd = rdd.reduceByKey(lambda a, b: a+b)
-rdd = rdd.sortBy(False, lambda x: x[1])
+rdd = rdd.sortBy(lambda x: x[1], False)
 
 for row in rdd.take(10):
 	print(row[0] + ": " + str(row[1]))
