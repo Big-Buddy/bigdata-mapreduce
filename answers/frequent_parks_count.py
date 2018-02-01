@@ -28,4 +28,4 @@ most_frequent.sort(key = itemgetter(1), reverse = True)
 
 
 for row in most_frequent[0:9]:
-	print(row[0] + ": " + str(row[1]))f
+	print(row[0] + ": " + str(row[1]))
