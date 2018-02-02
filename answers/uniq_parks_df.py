@@ -11,9 +11,9 @@ df = df.filter(df['Nom_parc'] != '')
 
 df = df.orderBy(['Nom_parc'], ascending = True)
 
-df = df.groupBy('Nom_parc')
-
 df = df.select('Nom_parc')
+
+df = df.distinct()
 
 for row in df.collect():
 	print(row)
