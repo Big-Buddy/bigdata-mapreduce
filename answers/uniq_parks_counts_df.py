@@ -1,7 +1,6 @@
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
-from pyspark.sql.function import typedLit
 
 file_name = sys.argv[1]
 
