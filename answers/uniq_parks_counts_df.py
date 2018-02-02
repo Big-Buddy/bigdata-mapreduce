@@ -15,7 +15,4 @@ df = df.withColumn('num_of_trees', lit(1))
 
 df = df.orderBy(['Nom_parc'], ascending = True)
 
-df = df.groupBy('Nom_parc').agg({'num_of_trees': 'sum'})
-
-for row in df.collect():
-	print(row['Nom_parc'] + ": " + str(row['num_of_trees']))
+df = df.groupBy('Nom_parc').agg({'num_of_trees': 'sum'}).show()
