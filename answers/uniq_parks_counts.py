@@ -8,7 +8,7 @@ with open(csv_name, encoding='utf-8') as f:
 	next(reader)
 	for row in reader:
 		if not unique_parks_counts and row[6]:
-			unique_parks_counts.append((row[6], 1))
+			unique_parks_counts.append((row[6], 0))
 
 		if row[6] and unique_parks_counts:		
 			flag = False		
@@ -20,7 +20,6 @@ with open(csv_name, encoding='utf-8') as f:
 					
 			if flag:
 				unique_parks_counts[ptr] = (unique_parks_counts[ptr][0], unique_parks_counts[ptr][1]+1)
-				flag = False
 			else:
 				unique_parks_counts.append((row[6], 1))
 				
