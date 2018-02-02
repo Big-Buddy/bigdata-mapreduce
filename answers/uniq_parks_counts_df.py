@@ -15,7 +15,5 @@ df = df.withColumn('num_of_trees', lit(1))
 
 df = df.orderBy(['Nom_parc'], ascending = True)
 
-df = df.groupBy('Nom_parc')
-
-for row in df.collect():
+for row in df.groupBy('Nom_parc'):
 	print(row['Nom_parc'] + ": " + str(row['num_of_trees']))
