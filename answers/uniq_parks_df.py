@@ -1,5 +1,6 @@
 import sys
 from pyspark.sql import SparkSession
+from pyspark.sql import Row
 
 file_name = sys.argv[1]
 
@@ -16,4 +17,4 @@ df = df.select('Nom_parc')
 df = df.distinct()
 
 for row in df.collect():
-	print(row)
+	print(row['Nom_parc'])
