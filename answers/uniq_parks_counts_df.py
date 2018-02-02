@@ -1,7 +1,7 @@
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql import Row
-from pyspark.sql.functions import lit
+from pyspark.sql.functions import typedLit
 
 file_name = sys.argv[1]
 
@@ -11,7 +11,7 @@ df = spark.read.csv(file_name, header = True)
 
 df = df.filter(df['Nom_parc'] != '')
 
-df = df.withColumn('num_of_trees', lit(1))
+df = df.withColumn('num_of_trees', typedLit(1))
 
 df = df.orderBy(['Nom_parc'], ascending = True)
 
